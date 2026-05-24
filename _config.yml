@@ -1,0 +1,6 @@
+title: App Docs
+description: Public documentation for all apps by Harshit Gindra
+theme: jekyll-theme-cayman
+
+plugins:
+  - jekyll-seo-tag

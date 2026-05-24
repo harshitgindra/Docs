@@ -1,0 +1,30 @@
+name: Broken Link Checker
+
+on:
+  push:
+    branches:
+      - main
+  schedule:
+    # Runs every Monday at 9:00 AM UTC to catch externally broken links
+    - cron: "0 9 * * 1"
+  workflow_dispatch:
+
+jobs:
+  linkcheck:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Check links
+        uses: lycheeverse/lychee-action@v2
+        with:
+          # Check all markdown files
+          args: >-
+            --verbose
+            --no-progress
+            '**/*.md'
+          # Create a GitHub Issue if broken links are found
+          fail: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

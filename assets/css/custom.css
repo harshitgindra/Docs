@@ -1,0 +1,267 @@
+/* ── Global Reset & Base ─────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #24292e;
+  background: #f6f8fa;
+  margin: 0;
+}
+
+/* ── Header ──────────────────────────────────────────────────────── */
+.site-header {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 60%, #0f3460 100%);
+  color: white;
+  padding: 0 1.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+.header-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 1rem 0;
+}
+
+.site-branding {
+  display: flex;
+  flex-direction: column;
+}
+
+.site-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: white;
+  text-decoration: none;
+  letter-spacing: -0.3px;
+}
+
+.site-tagline {
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.6);
+  margin: 0;
+}
+
+/* ── Navigation ──────────────────────────────────────────────────── */
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+}
+
+.site-nav a {
+  color: rgba(255,255,255,0.85);
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-weight: 500;
+  padding: 0.35rem 0.75rem;
+  border-radius: 20px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.site-nav a:hover {
+  background: rgba(255,255,255,0.15);
+  color: white;
+}
+
+/* ── Main Content ────────────────────────────────────────────────── */
+.page-content {
+  padding: 2.5rem 1.5rem;
+}
+
+.content-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 10px;
+  padding: 2.5rem 3rem;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08), 0 4px 16px rgba(0,0,0,0.06);
+}
+
+/* ── Typography ──────────────────────────────────────────────────── */
+.content-wrapper h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1a1a2e;
+  border-bottom: 3px solid #0f3460;
+  padding-bottom: 0.5rem;
+  margin-top: 0;
+}
+
+.content-wrapper h2 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #1a1a2e;
+  margin-top: 2rem;
+  padding-bottom: 0.25rem;
+  border-bottom: 1px solid #e1e4e8;
+}
+
+.content-wrapper h3 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #24292e;
+  margin-top: 1.5rem;
+}
+
+.content-wrapper p {
+  color: #444d56;
+}
+
+.content-wrapper a {
+  color: #0f3460;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(15,52,96,0.3);
+  transition: border-color 0.2s;
+}
+
+.content-wrapper a:hover {
+  border-bottom-color: #0f3460;
+}
+
+.content-wrapper ul, .content-wrapper ol {
+  padding-left: 1.5rem;
+  color: #444d56;
+}
+
+.content-wrapper li {
+  margin-bottom: 0.35rem;
+}
+
+/* ── Tables ──────────────────────────────────────────────────────── */
+.content-wrapper table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+  margin: 1.5rem 0;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 0 1px #e1e4e8;
+}
+
+.content-wrapper th {
+  background: #1a1a2e;
+  color: white;
+  text-align: left;
+  padding: 0.75rem 1rem;
+  font-weight: 600;
+}
+
+.content-wrapper td {
+  padding: 0.65rem 1rem;
+  border-bottom: 1px solid #e1e4e8;
+  color: #444d56;
+}
+
+.content-wrapper tr:last-child td {
+  border-bottom: none;
+}
+
+.content-wrapper tr:nth-child(even) td {
+  background: #f6f8fa;
+}
+
+/* ── Horizontal Rules ────────────────────────────────────────────── */
+.content-wrapper hr {
+  border: none;
+  border-top: 1px solid #e1e4e8;
+  margin: 2rem 0;
+}
+
+/* ── Blockquotes / callouts ──────────────────────────────────────── */
+.content-wrapper blockquote {
+  margin: 1.5rem 0;
+  padding: 1rem 1.25rem;
+  background: #fff8e1;
+  border-left: 4px solid #f0a500;
+  border-radius: 0 6px 6px 0;
+  color: #5a4a00;
+}
+
+/* ── Code ────────────────────────────────────────────────────────── */
+.content-wrapper code {
+  background: #f6f8fa;
+  border: 1px solid #e1e4e8;
+  border-radius: 4px;
+  padding: 0.15em 0.4em;
+  font-size: 0.875em;
+}
+
+/* ── App Cards (home page) ───────────────────────────────────────── */
+.app-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+}
+
+.app-card {
+  border: 1px solid #e1e4e8;
+  border-radius: 10px;
+  padding: 1.25rem 1.5rem;
+  background: #f6f8fa;
+  transition: box-shadow 0.2s, border-color 0.2s;
+}
+
+.app-card:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  border-color: #0f3460;
+}
+
+.app-card a {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #1a1a2e;
+  text-decoration: none;
+  border-bottom: none;
+}
+
+.app-card p {
+  font-size: 0.875rem;
+  color: #6a737d;
+  margin: 0.4rem 0 0;
+}
+
+/* ── Footer ──────────────────────────────────────────────────────── */
+.site-footer {
+  background: #1a1a2e;
+  color: rgba(255,255,255,0.6);
+  text-align: center;
+  padding: 1.5rem;
+  font-size: 0.85rem;
+}
+
+.site-footer a {
+  color: rgba(255,255,255,0.8);
+  text-decoration: none;
+}
+
+.site-footer a:hover {
+  color: white;
+}
+
+.site-footer p {
+  margin: 0.35rem 0;
+}
+
+/* ── Responsive ──────────────────────────────────────────────────── */
+@media (max-width: 640px) {
+  .content-wrapper {
+    padding: 1.5rem 1.25rem;
+  }
+
+  .header-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .content-wrapper h1 {
+    font-size: 1.5rem;
+  }
+}
