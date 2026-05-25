@@ -1,0 +1,6 @@
+# Custom iOS URL scheme — not a web link, cannot be resolved by lychee
+mindknot://
+
+# Apple legal pages return HTTP 403 to automated link checkers
+https://www.apple.com/legal/internet-services/itunes/
+https://www.apple.com/legal/internet-services/icloud/
