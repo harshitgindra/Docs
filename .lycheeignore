@@ -4,3 +4,6 @@ mindknot://
 # Apple legal pages return HTTP 403 to automated link checkers
 https://www.apple.com/legal/internet-services/itunes/
 https://www.apple.com/legal/internet-services/icloud/
+
+# Apple's report-a-problem portal redirects to auth page from CI environments
+https://reportaproblem.apple.com
