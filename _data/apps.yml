@@ -1,3 +1,7 @@
 - name: MindKnot
   url: /MindKnot
   description: A riddle puzzle game for iOS & iPadOS with solo play, streaks, and multiplayer modes
+
+- name: Fact or Fake
+  url: /FactOrFake
+  description: A trivia game for iOS with daily challenges, solo quests across 8 categories, and local multiplayer party mode over Bluetooth
